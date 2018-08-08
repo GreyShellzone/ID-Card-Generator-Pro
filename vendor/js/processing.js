@@ -9,10 +9,12 @@ var textbox = new fabric.Textbox('New text', {
     width: 150,
     fontSize: 20
 });
+
 canvas.add(textbox).setActiveObject(textbox);
 fonts.unshift('Times New Roman');
 // Populate the fontFamily select
 var select = document.getElementById("font-family");
+
 fonts.forEach(function(font) {
     var option = document.createElement('option');
     option.innerHTML = font;

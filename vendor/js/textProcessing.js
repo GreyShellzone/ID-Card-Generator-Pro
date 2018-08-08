@@ -1,39 +1,19 @@
-
-var lastNumber = 50;
-
-function addText() {
-    var canvas = new fabric.Canvas('parent');
-    // Define an array with all fonts
-    var fonts = ["Pacifico", "VT323", "Quicksand", "Inconsolata"];
-
-    var textbox = new fabric.Textbox('New text', {
-        left: lastNumber,
-        top: lastNumber,
-        width: 150,
-        fontSize: 20
-    });
-
-    lastNumber += 10;
-    canvas.add(textbox).setActiveObject(textbox);
-    fonts.unshift('Times New Roman');
-    textbox = null;
-}
-
 fabric.Object.prototype.transparentCorners = false;
 fabric.Object.prototype.padding = 5;
 
 var canvas = this.__canvas = new fabric.Canvas('parent');
+var lastPosition = 20;
 
 function addTextBox() {
     var text = new fabric.IText('New text', {
         fontSize: 20,
-        left: 20,
-        top: 20
+        left: lastPosition,
+        top: lastPosition
     });
     canvas.add(text).setActiveObject(text);
+
+    lastPosition += 20;
 }
-
-
 
 addHandler('color', function(obj) {
     setStyle(obj, 'fill', this.value);
@@ -123,3 +103,25 @@ function addHandler(id, fn, eventName) {
         }
     };
 }
+
+/*
+var lastNumber = 50;
+
+function addText() {
+    var canvas = new fabric.Canvas('parent');
+    // Define an array with all fonts
+    var fonts = ["Pacifico", "VT323", "Quicksand", "Inconsolata"];
+
+    var textbox = new fabric.Textbox('New text', {
+        left: lastNumber,
+        top: lastNumber,
+        width: 150,
+        fontSize: 20
+    });
+
+    lastNumber += 10;
+    canvas.add(textbox).setActiveObject(textbox);
+    fonts.unshift('Times New Roman');
+    textbox = null;
+}
+*/

@@ -7,7 +7,7 @@ function addText(){
 
     var html = [
         '<canvas class="tutorial">',
-        '<canvas class="tutorial-heading">' + title + '<canvas>',
+        '<canvas class="tutorial-heading">' + title + '</canvas>',
         '</canvas>'
     ].join("\n");
 

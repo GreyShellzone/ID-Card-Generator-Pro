@@ -3,12 +3,12 @@ const jquery = require('../jquery/jquery.min')
 
 function addText(){
 
-    var title = "Constructing HTML Elements";
+    var title = "Je suis Nathan TELA";
 
     var html = [
-        '<div class="tutorial">',
-        '<h1 class="tutorial-heading">' + title + '<h1>',
-        '</div>'
+        '<canvas class="tutorial">',
+        '<canvas class="tutorial-heading">' + title + '<canvas>',
+        '</canvas>'
     ].join("\n");
 
     $("#parent").append(html);

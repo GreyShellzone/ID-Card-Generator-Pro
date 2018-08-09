@@ -75,8 +75,6 @@ addHandler('text-cmd-overline', function(obj) {
     setStyle(obj, 'overline', this.value);
 }, 'onchange');
 
-
-
 function setStyle(object, styleName, value) {
     if (object.setSelectionStyles && object.isEditing) {
         var style = {};
@@ -103,6 +101,12 @@ function addHandler(id, fn, eventName) {
         }
     };
 }
+
+/*
+*
+* For Sabid
+*
+* */
 
 /*
 var lastNumber = 50;

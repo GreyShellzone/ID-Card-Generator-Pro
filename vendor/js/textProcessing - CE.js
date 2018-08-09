@@ -101,3 +101,19 @@ function addHandler(id, fn, eventName) {
         }
     };
 }
+
+var download = document.getElementById('generate');
+
+download.addEventListener('click', function(ev) {
+    download.href = canvas.toDataURL();
+    download.download = "image.png";
+}, false);
+
+var link = document.createElement('a');
+link.innerHTML = 'download image';
+
+link.addEventListener('click', function(ev) {
+    link.href = canvas.toDataURL();
+    link.download = "mypainting.png";
+}, false);
+document.body.appendChild(link);

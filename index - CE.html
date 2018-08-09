@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ICGP</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/portfolio-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">ICGP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+      <ul class="navbar-nav ml-auto">
+
+        <!--
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">#</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4">
+    ID Card Generator Pro
+  </h1>
+
+  <!-- Portfolio Item Row -->
+  <div class="row">
+
+    <!-- C'est ici que ça se passe -->
+    <canvas height="450" width="750" id="parent"  style="border:1px solid black;"></canvas>
+
+    <div class="col-md-4">
+      <div class="col-md-8 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="img/500x300.jpg" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-8 col-sm-6 mb-4" onclick="addTextBox()">
+        <a href="#">
+          <img class="img-fluid" src="img/txt.png" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-8 col-sm-6 mb-4">
+        <button class="btn btn-info">Generate</button>
+        <button class="btn btn-warning">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+  <br />
+
+  <!--  ***************************************** CONTROLS ************************************************** -->
+
+  <div id="text-controls">
+    <label for="opacity">Opacity: </label>
+    <input value="100" type="range" bind-value-to="opacity" id="opacity">
+    <input type="color" value="" id="color" size="10">
+    <label for="font-family" style="display:inline-block">Font family:</label>
+    <select id="font-family">
+      <option value="arial">Arial</option>
+      <option value="helvetica" selected>Helvetica</option>
+      <option value="myriad pro">Myriad Pro</option>
+      <option value="delicious">Delicious</option>
+      <option value="verdana">Verdana</option>
+      <option value="georgia">Georgia</option>
+      <option value="courier">Courier</option>
+      <option value="comic sans ms">Comic Sans MS</option>
+      <option value="impact">Impact</option>
+      <option value="monaco">Monaco</option>
+      <option value="optima">Optima</option>
+      <option value="hoefler text">Hoefler Text</option>
+      <option value="plaster">Plaster</option>
+      <option value="engagement">Engagement</option>
+    </select>
+    <br>
+    <label for="text-align" style="display:inline-block">Text align:</label>
+    <select id="text-align">
+      <option value="left">Left</option>
+      <option value="center">Center</option>
+      <option value="right">Right</option>
+      <option value="justify">Justify</option>
+    </select>
+    <div>
+      <label for="text-bg-color">Background color:</label>
+      <input type="color" value="" id="text-bg-color" size="10">
+    </div>
+    <div>
+      <label for="text-lines-bg-color">Background text color:</label>
+      <input type="color" value="" id="text-lines-bg-color" size="10">
+    </div>
+    <div>
+      <label for="text-stroke-color">Stroke color:</label>
+      <input type="color" value="" id="text-stroke-color">
+    </div>
+    <div>
+
+
+      <label for="text-stroke-width">Stroke width:</label>
+      <input type="range" value="1" min="1" max="5" id="text-stroke-width">
+    </div>
+    <div>
+      <label for="text-font-size">Font size:</label>
+      <input type="range" value="" min="1" max="120" step="1" id="text-font-size">
+    </div>
+    <div>
+      <label for="text-line-height">Line height:</label>
+      <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height">
+    </div>
+  </div>
+  <div id="text-controls-additional">
+    <input type='checkbox' name='fonttype' id="text-cmd-bold"> Bold
+
+    <input type='checkbox' name='fonttype' id="text-cmd-italic"> Italic
+
+    <input type='checkbox' name='fonttype' id="text-cmd-underline"> Underline
+
+    <input type='checkbox' name='fonttype' id="text-cmd-linethrough"> Linethrough
+
+    <input type='checkbox' name='fonttype' id="text-cmd-overline"> Overline
+  </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">&copy; ID Card Generator Pro Dev Version</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/js/interact.min.js"></script>
+<script src="vendor/js/fabric.min.js"></script>
+<script src="vendor/js/textProcessing.js"></script>
+
+</body>
+
+</html>

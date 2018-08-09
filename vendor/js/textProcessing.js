@@ -103,12 +103,6 @@ function addHandler(id, fn, eventName) {
 }
 
 /*
-*
-* For Sabid
-*
-* */
-
-/*
 var lastNumber = 50;
 
 function addText() {
